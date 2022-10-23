@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <title>Book Coffee</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- <h1 style="text-align: center; color:rgb(241, 95, 66);align-items: center;" >Buy a cup of coffee  </h1> -->
+
+        <!-- Card For Coffee -->
+        <div class="cardCon" id="cardConProduct">
+
+            <div class="card">
+                <h1>Espresso</h1>
+                <div style="flex-direction: row; display:flex;margin-top: 3%;">
+                    <button style="padding: 5px;" onclick="countDecrement('1')">-</button>
+                    <p style="padding:5px;" id="count1"></p>
+                    <button style="padding: 5px;" onclick="countIncrement('1')">+</button>
+                </div>
+                <div style="margin-top: 3%;">
+                    <div style="flex-direction: row; display:flex;justify-content:flex-start;">
+                        <input type="checkbox" id="checkBoxMilk1">
+                        <label style="padding-left:15px;">Add milk</label>
+                    </div>
+                    <div style="flex-direction: row; display:flex;justify-content:flex-start;">
+                        <input type="checkbox" id="checkBoxCreame1">
+                        <label style="padding-left:15px;">Add cream</label>
+                    </div>
+                    <div style="flex-direction: row; display:flex;justify-content:flex-start;">
+                        <input type="checkbox" id="checkBoxLatte1">
+                        <label style="padding-left:15px;">Add latto</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h1>Cappuccino</h1>
+                <div style="flex-direction: row; display:flex;margin-top: 3%;">
+                    <button style="padding: 5px;" onclick="countDecrement('2')">-</button>
+                    <p style="padding:5px;" id="count2"></p>
+                    <button style="padding: 5px;" onclick="countIncrement('2')">+</button>
+                </div>
+                <div style="margin-top: 3%;">
+                    <div style="flex-direction: row; display:flex;justify-content:flex-start;">
+                        <input type="checkbox" id="checkBoxMilk2">
+                        <label style="padding-left:15px;">Add milk</label>
+                    </div>
+                    <div style="flex-direction: row; display:flex;justify-content:flex-start;">
+                        <input type="checkbox" id="checkBoxCreame2">
+                        <label style="padding-left:15px;">Add cream</label>
+                    </div>
+                    <div style="flex-direction: row; display:flex;justify-content:flex-start;">
+                        <input type="checkbox" id="checkBoxLatte2">
+                        <label style="padding-left:15px;">Add latto</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h1>Latte</h1>
+                <div style="flex-direction: row; display:flex;margin-top: 3%;">
+                    <button style="padding: 5px;" onclick="countDecrement('3')">-</button>
+                    <p style="padding:5px;" id="count3"></p>
+                    <button style="padding: 5px;" onclick="countIncrement('3')">+</button>
+                </div>
+                <div style="margin-top: 3%;">
+                    <div style="flex-direction: row; display:flex;justify-content:flex-start;">
+                        <input type="checkbox" id="checkBoxMilk3">
+                        <label style="padding-left:15px;">Add milk</label>
+                    </div>
+                    <div style="flex-direction: row; display:flex;justify-content:flex-start;">
+                        <input type="checkbox" id="checkBoxCreame3">
+                        <label style="padding-left:15px;">Add cream</label>
+                    </div>
+                    <div style="flex-direction: row; display:flex;justify-content:flex-start;">
+                        <input type="checkbox" id="checkBoxLatte3">
+                        <label style="padding-left:15px;">Add latto</label>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- For Button -->
+        <div id="buttonCon">
+            <button onclick="totalAmount()" class="btn" id="btnBill">Generate Bill</button>
+        </div>
+
+        <!-- For Billing Modal -->
+        <div class="cardCon" id="cardConBill">
+            <div class="card" style="width: 80%;">
+                <h1 style="margin-bottom:5%;">Total Bill</h1>
+                <p id="bill1" class="billComp"> </p>
+                <p id="bill2" class="billComp"> </p>
+                <p id="bill3" class="billComp"> </p>
+                <p id="billTotal" class="totalBill"> </p>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./index.js"></script>
+</html>
